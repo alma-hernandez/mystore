@@ -10,10 +10,12 @@ class OrdersController < ApplicationController
   
     def new
       # Logic to initialize a new order and render new view
+      @orders = Order.new
     end
   
     def create
       # Logic to save a new order and redirect to index or show view
+      @orders = Order.create
     end
   
     def edit
