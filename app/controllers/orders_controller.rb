@@ -1,6 +1,7 @@
-class OrderssController < ApplicationController
+class OrdersController < ApplicationController
     def index
       # Logic to fetch all orders and render index view
+      @orders = Order.all
     end
   
     def show
