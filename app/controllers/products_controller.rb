@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
+
     def index
       # Logic to fetch all products and render index view
+      @products = Product.all
     end
   
     def show
@@ -26,5 +29,11 @@ class ProductsController < ApplicationController
     def destroy
       # Logic to delete a product and redirect to index view
     end
+
+    private
+
+  def set_product
+    @product = Product.find(params[:id])
   end
+end
   
