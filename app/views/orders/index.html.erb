@@ -1,3 +1,4 @@
+
 <h1>ORDERS</h1>
 <ul>
   <% @orders.each do |order| %>
@@ -7,5 +8,7 @@
     </li>
   <% end %>
 </ul>
-<%= link_to "Home Page", root_path%>
-<%= link_to "Products Page", products_path%>
+<button onclick="createNewOrder()">Create New Order</button><br/>
+<%= link_to "Home Page", root_path %><br/>
+<%= link_to "Products Page", products_path %>
+
